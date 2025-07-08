@@ -26,28 +26,21 @@ const Body =() =>{
     <div className="body">
       <div className='search'>Search</div>
       <div className='res-container'>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/>
+      <RestaurantCard resname ="Meghna Biryani"/>
+      <RestaurantCard resname= "Thalpakatti"/>
+      
       </div>
     </div>
   )
 }
 
-const RestaurantCard =() =>{
+const RestaurantCard =(props) =>{
+  const {resname} = props;
   return(
   <div className='res-card'>
    
     <img className="res-card-img" src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg" alt = "img"></img>
-     <h3>Megna Foods</h3>
+     <h3>{resname}</h3>
        <h4>Biryani, North-Indian, Tandoori</h4>
          <h4>4.3 Star</h4>
          <h4>38 mins</h4>
