@@ -73,3 +73,12 @@
   margin: 10px;
   cursor: pointer;
 }
+
+.filter{
+  display: flex;
+}
+
+.search-btn{
+  margin-left: 5px;
+
+}
