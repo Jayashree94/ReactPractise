@@ -1,29 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Aboutus from './componentList/Aboutus';
-import Contactus from './componentList/Contactus';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Aboutus from "./componentList/Aboutus";
+import Contactus from "./componentList/Contactus";
+import Error from "./componentList/Error";
+import Body from "./componentList/Body";
+import RestaurantMenu from "./componentList/RestaurantMenu";
 
 const appRouter = createBrowserRouter([
-  {path: "/",
-    element:<App/>
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      { path: "/", element: <Body /> },
+      { path: "/about", element: <Aboutus /> },
+      { path: "/contact", element: <Contactus /> },
+      { path:"/restaurants/:resid", element: <RestaurantMenu/>},
+    ],
+    errorElement: <Error />,
   },
-  {path: "/about",
-  element: <Aboutus/>
-  },
-   {path: "/contact",
-  element: <Contactus/>
-  }
-])
+]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<RouterProvider router = {appRouter}/>)
-
-
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={appRouter} />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
