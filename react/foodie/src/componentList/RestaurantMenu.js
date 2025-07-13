@@ -6,6 +6,8 @@ const RestaurantMenu = () => {
 
   useEffect(() => {
     fetchMenu();
+
+    return()=>{}
   }, []);
 
   const fetchMenu = async () => {
