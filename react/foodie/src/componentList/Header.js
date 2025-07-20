@@ -16,7 +16,7 @@ const Header =() =>{
     
   }
   const onlinestatus = useOnlineStatus();
-  const loggedInUser = useContext(UserContext);
+  const {loggedInUser} = useContext(UserContext);
 
   return(
 
@@ -33,7 +33,7 @@ const Header =() =>{
         <li><Link to='/about'>About US</Link></li>
         <li><Link to='/grocery'>Grocery</Link></li>
 
-        <li>Cart {cartItems.length} ( - items)</li>
+        <li>Cart ( {cartItems.length}  - items)</li>
         <button className="login-btn" onClick={toggleButton}> {btnName} </button>
         <li>{loggedInUser}</li>
       </ul>

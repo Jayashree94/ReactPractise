@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-react": "^7.27.1",
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/postcss": "^4.1.11",
     "@testing-library/dom": "^10.4.0",
@@ -40,5 +41,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "module.exports" : {
+  "collectCoverage": true,
+  "coverageReporters": ["text", "text-summary", "lcov", "json"]
 }
+
+
+  
+}
+
+
