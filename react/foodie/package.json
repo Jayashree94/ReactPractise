@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/preset-react": "^7.27.1",
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/postcss": "^4.1.11",
     "@testing-library/dom": "^10.4.0",
@@ -13,7 +12,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.6.3",
+    "react-router": "^6.30.1",
+    "react-router-dom": "^6.30.1",
     "react-scripts": "5.0.1",
     "tailwindcss": "^4.1.11",
     "web-vitals": "^2.1.4"
@@ -42,13 +42,19 @@
       "last 1 safari version"
     ]
   },
-  "module.exports" : {
-  "collectCoverage": true,
-  "coverageReporters": ["text", "text-summary", "lcov", "json"]
+  "module.exports": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text",
+      "text-summary",
+      "lcov",
+      "json"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "babel-jest": "^30.0.4"
+  }
 }
-
-
-  
-}
-
-
