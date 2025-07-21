@@ -14,7 +14,7 @@ global.fetch = jest.fn(() => {
 });
 
 
-it("should render the body component with search buttom", async () =>{
+it("should search for pizza input in body component", async () =>{
 
 await act(async() => render(
     <BrowserRouter>
