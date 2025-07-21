@@ -45,13 +45,11 @@ const Body = () => {
     
   };
 
-  console.log(SearchList);
 
   const onlineStatus = useOnlineStatus();
-  console.log("hello")
+
 
   if(onlineStatus === false){
-    console.log("offline");
     return(
     <h1>Looks like you are offline, please check your internet connectiom..</h1>)
   } 
@@ -66,6 +64,7 @@ const Body = () => {
         <div className="search">
           <input
             type="text"
+            data-testid = "searchInput"
             className="search-text"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
